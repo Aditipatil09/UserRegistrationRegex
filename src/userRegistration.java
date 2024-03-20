@@ -3,22 +3,23 @@ import java.util.regex.*;
 
 class main{
     public static void main(String args[]){
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter a First Name:");
-        String firstName = scanner.nextLine();
+        Scanner scanner = new Scanner (System.in);
+        System.out.println("Enter the Last Name:");
+        String lastName = scanner.nextLine();
 
-        if(isValidFirstName(firstName)){
-            System.out.println("Valid first name:");
-        } else{
-            System.out.println("Invalid first name");
+        if(isValidLastName(lastName)){
+            System.out.println("Valid Last Name:");
+        }else {
+            System.out.println("Invalid Last Name:");
         }
     }
-public static boolean isValidFirstName(String firstName){
-    String Regex = "[A-Z]{1}[a-z A-Z]{2,}";
-    Pattern pattern= Pattern.compile(Regex);
-    Matcher matcher = pattern.matcher(firstName);
-    return matcher.matches();
 
-}
+    public static boolean isValidLastName( String lastName){
+        String Regex = "[A-Z]{1}[a-z ]{2,}";
+        Pattern pattern = Pattern.compile(Regex);
+        Matcher matcher = pattern.matcher(lastName);
 
+        return matcher.matches();
+
+    }
 }
