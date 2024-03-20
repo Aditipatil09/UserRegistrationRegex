@@ -4,20 +4,20 @@ import java.util.regex.*;
 class main{
     public static void main(String args[]){
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter the Phone number:");
-        String phoneNumber = scanner.nextLine();
+        System.out.println("Enter the Password:");
+        String password = scanner.nextLine();
 
-        if(isValidPhoneNumber (phoneNumber)){
-            System.out.println("Valid Phone Number:");
+        if(isValidPassword (password)){
+            System.out.println("Valid Password:");
         } else{
-            System.out.println("Invalid phone number");
+            System.out.println("Invalid Password");
         }
     }
 
-    public static boolean isValidPhoneNumber( String phoneNumber){
-        String Regex = "[9][1] [0-9]{10}" ;
+    public static boolean isValidPassword( String password){
+        String Regex = "[a-zA-Z0-9]{8,}" ;
         Pattern pattern = Pattern.compile(Regex);
-        Matcher matcher = pattern.matcher(phoneNumber);
+        Matcher matcher = pattern.matcher(password);
 
         return matcher.matches();
 
