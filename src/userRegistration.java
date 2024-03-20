@@ -15,7 +15,7 @@ class main{
     }
 
     public static boolean isValidPassword( String password){
-        String Regex = "[a-zA-Z0-9]{8,}" ;
+        String Regex = "^[A-Z]+[a-zA-Z0-9]*{8,}$" ;
         Pattern pattern = Pattern.compile(Regex);
         Matcher matcher = pattern.matcher(password);
 
