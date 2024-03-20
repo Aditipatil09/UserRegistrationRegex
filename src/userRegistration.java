@@ -15,7 +15,7 @@ class main{
     }
 
     public static boolean isValidPassword( String password){
-        String Regex = "^[0-9]?[a-zA-Z0-9]+" ;
+        String Regex = "^[a-zA-Z0-9]+[@]" ;
         Pattern pattern = Pattern.compile(Regex);
         Matcher matcher = pattern.matcher(password);
 
